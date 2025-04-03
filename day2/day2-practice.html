@@ -1,0 +1,275 @@
+<!--exp 1
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p id="intro">Finding HTML Elements by Id</p>
+<p>This example demonstrates the <b>getElementsById</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+    const element = document.getElementsByTagName("p");
+    document.getElementById("demo").innerHTML =
+    "The text from the intro paragraph is: " +element[1].innerHTML;
+/* const element = document.getElementById("intro");
+
+document.getElementById("demo").innerHTML = 
+"The text from the intro paragraph is: " + element.innerHTML; */
+
+</script>
+
+</body>
+</html>
+-->
+
+
+<!--exp2
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<div id="main">
+<p>Finding HTML Elements by Tag Name</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+</div>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+</script>
+
+</body>
+</html>-->
+
+
+<!-- exp 3
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Class Name.</p>
+<p class="intro">Hello World!</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementsByClassName("intro");
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+</script>
+
+</body>
+</html>
+-->
+
+
+<!-- exp 4
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname"> name: </label><br>
+       <input type="text" id="fname" name="fname"><br>
+
+        </form>
+</body>
+</html>-->
+
+
+<!--exp 5
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Radio Buttons</h2>
+
+<p>Choose your favorite Web language:</p>
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form> 
+
+</body>
+</html>-->
+
+
+<!--exp 6
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form >
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="sanjay"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="manohar"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>-->
+
+<!--exp 7
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The select Element</h2>
+
+<p>The select element defines a drop-down list:</p>
+
+<form>
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="maruti">Maruti Suzuki</option>
+    <option value="hyundai">Hyundai</option>
+    <option value="tata">Tata</option>
+    <option value="mahindra">Mahindra</option>
+    
+  </select>
+  <input type="submit">
+</form>
+
+</body>
+</html> -->
+
+
+<!--exp 8
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The output Element</h2>
+<p>The output element represents the result of a calculation.</p>
+
+<form 
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+
+</body>
+</html>-->
+
+
+
+<!--exp 9
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  
+  let x = document.getElementById("numb").value;
+  let text;
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> -->
+  
+
+
+<!--exp 10
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+-->
+
+
+
+<!--exp 11
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form action="/action_page.php" method="post">
+  <input type="text" name="fname" required>
+  <input type="submit" value="Submit">
+</form>
+
+<p>If you click submit, without filling out the text field,
+your browser will display an error message.</p>
+
+</body>
+</html>-->
+
+
+
+
+
+
+
