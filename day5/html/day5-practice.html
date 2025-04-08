@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <title>Bootstrap Showcase</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">MyBootstrap</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Typography Examples -->
+    <h2 class="text-center text-primary">Typography Examples</h2>
+    <p class="text-nowrap">ThisTextWillNotWrap</p>
+    <p class="text-left">Left aligned text.</p>
+    <p class="text-center">Center aligned text.</p>
+    <p class="lead text-success">This is a lead paragraph that looks highlighted.</p>
+
+    <!-- Scrollable Code Block -->
+    <h3>Code Example</h3>
+    <div class="pre-scrollable">
+      <pre><code>
+function greet() {
+  alert("Hi!");
+}
+      </code></pre>
+    </div>
+
+    <!-- Panel Example -->
+    <div class="panel panel-danger">
+      <div class="panel-heading">Warning Panel</div>
+      <div class="panel-body">Something went wrong. Please try again!</div>
+    </div>
+
+    <div class="panel panel-success">
+      <div class="panel-heading">Success Panel</div>
+      <div class="panel-body">Operation completed successfully.</div>
+    </div>
+
+    <!-- Contextual Texts and Backgrounds -->
+    <h3>Contextual Colors</h3>
+    <p class="text-primary">Primary text</p>
+    <p class="text-success">Success text</p>
+    <p class="text-info">Info text</p>
+    <p class="text-warning">Warning text</p>
+    <p class="text-danger">Danger text</p>
+
+    <h3>Contextual Backgrounds</h3>
+    <p class="bg-primary">Primary background</p>
+    <p class="bg-success">Success background</p>
+    <p class="bg-info">Info background</p>
+    <p class="bg-warning">Warning background</p>
+    <p class="bg-danger">Danger background</p>
+
+    <!-- Description List -->
+    <h3>Description List</h3>
+    <dl class="dl-horizontal">
+      <dt>Name</dt>
+      <dd>Relangi Sanjay Manohar</dd>
+      <dt>Email</dt>
+      <dd>sanjay@example.com</dd>
+      <dt>Location</dt>
+      <dd>Andhra Pradesh, India</dd>
+    </dl>
+
+    <!-- Bootstrap Grid System -->
+    <h3>Grid System Example</h3>
+    <div class="row">
+      <div class="col-sm-4 bg-info">Column 1</div>
+      <div class="col-sm-4 bg-warning">Column 2</div>
+      <div class="col-sm-4 bg-danger">Column 3</div>
+    </div>
+
+    <!-- Nested Grid Example -->
+    <h3>Nested Grid</h3>
+    <div class="row">
+      <div class="col-sm-6 bg-success">
+        Parent Col
+        <div class="row">
+          <div class="col-sm-6 bg-primary">Nested 1</div>
+          <div class="col-sm-6 bg-info">Nested 2</div>
+        </div>
+      </div>
+      <div class="col-sm-6 bg-warning">Second Parent Col</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
