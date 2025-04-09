@@ -1,4 +1,39 @@
-    const form = document.querySelector("form");
+document.addEventListener("DOMContentLoaded", () => {
+    const mobileField = document.getElementById("mobile");
+    const resumeField = document.getElementById("resume");
+    const messageField = document.getElementById("message");
+    const charCounter = document.querySelector(".char-counter");
+
+    // Mobile number validation
+    mobileField.addEventListener("input", () => {
+        const errorMessage = mobileField.nextElementSibling;
+        if (!mobileField.value.startsWith("6") && !mobileField.value.startsWith("7") &&
+            !mobileField.value.startsWith("8") && !mobileField.value.startsWith("9")) {
+            errorMessage.textContent = "Phone number must start from 6 or higher.";
+        } else {
+            errorMessage.textContent = "";
+        }
+    });
+
+    // Resume file validation
+    resumeField.addEventListener("change", () => {
+        const errorMessage = resumeField.nextElementSibling;
+        const allowedExtensions = /(\.pdf|\.doc)$/i;
+        if (!allowedExtensions.test(resumeField.value)) {
+            errorMessage.textContent = "Only .pdf or .doc files are allowed.";
+            resumeField.value = ""; // Clear the invalid file
+        } else {
+            errorMessage.textContent = "";
+        }
+    });
+
+    // Live character counter for the message field
+    messageField.addEventListener("input", () => {
+        charCounter.textContent = `${messageField.value.length}/250`;
+    });
+});
+
+const form = document.querySelector("form");
 
     // Regex patterns for validation
     const nameRegex = /^[A-Za-z\s\-]*$/;
@@ -132,7 +167,7 @@
     const validateMobile = () => {
         const val = mobile.value.trim();
         if (!val || !mobileRegex.test(val)) {
-            showError(mobile, "A valid 10-digit mobile numbero.");
+            showError(mobile, "A valid 10-digit mobile number.");
         } else {
             clearError(mobile);
         }
