@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+
     const form = document.querySelector("form");
     const charCounter = document.querySelector(".char-counter");
   
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
-    // Restrict mobile input to start with 6-9
+    // Restrict mobile input to start with 6
     inputs.mobile.addEventListener("input", () => {
       let value = inputs.mobile.value.replace(/[^0-9]/g, "");
       if (value.length > 0 && !/^[6-9]/.test(value)) {
@@ -69,10 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         const valid = validators[key](input.value.trim());
         const messages = {
-          firstName: "First name is required and should contain only letters.",
-          lastName: "Last name is required and should contain only letters.",
+          firstName: "First name is required.",
+          lastName: "Last name is required.",
           email: "Enter a valid email address.",
-          mobile: "Enter a valid 10-digit mobile number starting with 6-9.",
+          mobile: "Enter a valid 10-digit mobile number starting with 6 and above.",
           position: "Please select a position.",
           dob: "Date of birth is required.",
           availableFrom: "Please provide an availability date.",
@@ -146,5 +146,5 @@ document.addEventListener("DOMContentLoaded", () => {
         if (firstError) firstError.scrollIntoView({ behavior: "smooth" });
       }
     });
-  });
+ 
   
